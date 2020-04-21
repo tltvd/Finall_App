@@ -3,6 +3,7 @@ package sample.SignUpPage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -42,23 +43,18 @@ public class SignUp_Controller {
     @FXML
     private ComboBox<?> city_choose;
 
-    public void openStartPage(){
-        cancel_button.setOnAction(event -> {
+    @FXML
+    void initialize() { }
+
+    public void handleClicks(ActionEvent actionEvent) {
+        if (actionEvent.getSource()==cancel_button) {
             try {
                 Parent root1 = FXMLLoader.load(getClass().getResource("/sample/StartPage/StartPage.fxml"));
                 Main.setscene(root1);
-                Main.window.setWidth(Main.WIDTH);
-                Main.window.setHeight(Main.HEIGHT);
                 Main.window.centerOnScreen();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-        });
-
+        }
     }
-
-
-    @FXML
-    void initialize() { }
 }

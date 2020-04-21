@@ -85,8 +85,10 @@ public class HomePage_Controller {
         });
     }
     public void colorChange(Button button){
+
         button.setOnMouseEntered(event -> {
-            button.setStyle("-fx-background-color : #ffd500");
+            button.setStyle("-fx-background-color : rgba(0,0,0,0.6)");
+
         });
         button.setOnMouseExited(event -> {
             button.setStyle("-fx-background-color :  #181818");
@@ -162,6 +164,7 @@ public class HomePage_Controller {
 
     }
 
+
     @FXML
     void initialize() {
 
@@ -176,7 +179,7 @@ public class HomePage_Controller {
                 //give the items some effect
 
                 nodes[i].setOnMouseEntered(event -> {
-                    nodes[j].setStyle("-fx-background-color : #ffd500");
+                    nodes[j].setStyle("-fx-background-color : rgba(0,0,0,0.6)");
                 });
                 nodes[i].setOnMouseExited(event -> {
                     nodes[j].setStyle("-fx-background-color : #02030A");
