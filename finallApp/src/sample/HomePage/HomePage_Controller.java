@@ -19,15 +19,10 @@ import sample.Main;
 public class HomePage_Controller {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private Button home_button;
 
-
+    @FXML
+    private Button Account_button;
 
     @FXML
     private Button My_Garage_button;
@@ -46,6 +41,9 @@ public class HomePage_Controller {
 
     @FXML
     private Button LogOut_button;
+
+    @FXML
+    private Button exit_button;
 
     @FXML
     private TextField Search_textfield;
@@ -72,7 +70,7 @@ public class HomePage_Controller {
     private Pane pnlInfo;
 
     @FXML
-    private Button test;
+    private Pane pnlMyAccount;
 
 
 
@@ -88,7 +86,7 @@ public class HomePage_Controller {
     }
     public void colorChange(Button button){
         button.setOnMouseEntered(event -> {
-            button.setStyle("-fx-background-color : #8685EF");
+            button.setStyle("-fx-background-color : #ffd500");
         });
         button.setOnMouseExited(event -> {
             button.setStyle("-fx-background-color :  #181818");
@@ -103,6 +101,7 @@ public class HomePage_Controller {
                 pnlMedia.setVisible(false);
                 pnlTuning.setVisible(false);
                 pnlMyGarage.setVisible(true);
+                pnlMyAccount.setVisible(false);
             }
             if (button==Information_button) {
                 pnlhome.setVisible(false);
@@ -111,6 +110,7 @@ public class HomePage_Controller {
                 pnlMedia.setVisible(false);
                 pnlTuning.setVisible(false);
                 pnlMyGarage.setVisible(false);
+                pnlMyAccount.setVisible(false);
             }
             if (button==home_button) {
                 pnlhome.setVisible(true);
@@ -119,6 +119,7 @@ public class HomePage_Controller {
                 pnlMedia.setVisible(false);
                 pnlTuning.setVisible(false);
                 pnlMyGarage.setVisible(false);
+                pnlMyAccount.setVisible(false);
             }
             if (button==NewCar_button) {
                 pnlhome.setVisible(false);
@@ -127,6 +128,7 @@ public class HomePage_Controller {
                 pnlMedia.setVisible(false);
                 pnlTuning.setVisible(false);
                 pnlMyGarage.setVisible(false);
+                pnlMyAccount.setVisible(false);
             }
             if (button==Tuning_button) {
                 pnlhome.setVisible(false);
@@ -135,6 +137,7 @@ public class HomePage_Controller {
                 pnlMedia.setVisible(false);
                 pnlTuning.setVisible(true);
                 pnlMyGarage.setVisible(false);
+                pnlMyAccount.setVisible(false);
             }
             if (button==Media_button) {
                 pnlhome.setVisible(false);
@@ -143,6 +146,16 @@ public class HomePage_Controller {
                 pnlMedia.setVisible(true);
                 pnlTuning.setVisible(false);
                 pnlMyGarage.setVisible(false);
+                pnlMyAccount.setVisible(false);
+            }
+            if (button==Account_button) {
+                pnlhome.setVisible(false);
+                pnlBuy.setVisible(false);
+                pnlInfo.setVisible(false);
+                pnlMedia.setVisible(false);
+                pnlTuning.setVisible(false);
+                pnlMyGarage.setVisible(false);
+                pnlMyAccount.setVisible(true);
             }
         });
 
@@ -163,7 +176,7 @@ public class HomePage_Controller {
                 //give the items some effect
 
                 nodes[i].setOnMouseEntered(event -> {
-                    nodes[j].setStyle("-fx-background-color : #8685EF");
+                    nodes[j].setStyle("-fx-background-color : #ffd500");
                 });
                 nodes[i].setOnMouseExited(event -> {
                     nodes[j].setStyle("-fx-background-color : #02030A");
@@ -181,6 +194,8 @@ public class HomePage_Controller {
         colorChange(Tuning_button);
         colorChange(My_Garage_button);
         colorChange(NewCar_button);
+        colorChange(exit_button);
+        colorChange(Account_button);
 
     }
 
@@ -203,10 +218,12 @@ public class HomePage_Controller {
         if (actionEvent.getSource()==Media_button) {
             panechanger(Media_button);
         }
+        if (actionEvent.getSource()==Account_button) {
+            panechanger(Account_button);
+        }
 
 
-
-        if (actionEvent.getSource() == test) {
+        if (actionEvent.getSource() == exit_button) {
             Main.window.close();
         }
 

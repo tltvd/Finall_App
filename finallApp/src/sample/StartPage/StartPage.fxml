@@ -25,12 +25,12 @@
          <font>
             <Font size="20.0" />
          </font></PasswordField>
-      <Button fx:id="sign_in_button" layoutX="511.0" layoutY="425.0" mnemonicParsing="false" onAction="#openHomePage" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #393939; -fx-background-radius: 30;" text="Sign in" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="sign_in_button" layoutX="511.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #393939; -fx-background-radius: 30;" text="Sign in" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Nirmala UI Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="sign_up_button" layoutX="511.0" layoutY="470.0" mnemonicParsing="false" onAction="#openSignUpPage" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #141414; -fx-border-color: #393939 #393939; -fx-background-radius: 30; -fx-border-radius: 30;" text="Sign up" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="sign_up_button" layoutX="511.0" layoutY="470.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #141414; -fx-border-color: #393939 #393939; -fx-background-radius: 30; -fx-border-radius: 30;" text="Sign up" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -56,5 +56,10 @@
             <DropShadow blurType="ONE_PASS_BOX" height="120.0" radius="59.5" width="120.0" />
          </effect>
       </ImageView>
+      <Button fx:id="exit_button" layoutX="509.0" layoutY="562.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #0D0D0D; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #0D0D0D;" text="Exit" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
