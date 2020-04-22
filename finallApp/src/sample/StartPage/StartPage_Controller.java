@@ -31,35 +31,59 @@ public class StartPage_Controller {
     private Button exit_button;
 
 
+    private void check(TextField username_textfield, PasswordField password_textfield) {
 
-
-
-    private void check(){
-        //if(username_textfield ==)
     }
 
-    public void openHomePage(){
-        sign_in_button.setOnAction(event -> {
-            try {
-                Parent root1 = FXMLLoader.load(getClass().getResource("/sample/HomePage/homepage.fxml"));
-                Main.setscene(root1);
 
-            } catch (IOException e) {
-                e.printStackTrace();
+    public void initialize() {
+
+        sign_in_button.setOnAction(event -> {
+            String username, password;
+            username=username_textfield.getText().trim();
+            password=password_textfield.getText().trim();
+
+            if (username.equals("admin")  && password.equals("admin") ) {
+                    try {
+                        Parent root1 = FXMLLoader.load(getClass().getResource("/sample/admin/adminPage.fxml"));
+                        Main.setscene(root1);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+            }
+
+            if (username.equals("1")  && password.equals("1") ) {
+                try {
+                    Parent root1 = FXMLLoader.load(getClass().getResource("/sample/HomePage/homepage.fxml"));
+                    Main.setscene(root1);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (!username.equals("")  && !password.equals("") ) {
+                loginUser(username,password);
+            }
+            else{
+                System.out.println("ERROR!!! User not found");
             }
 
         });
 
     }
 
+    private void loginUser(String username, String password) {
 
-    public void initialize() {
     }
+
     public void handleClicks(ActionEvent actionEvent) {
-        if (actionEvent.getSource()==exit_button) {
+        if (actionEvent.getSource() == exit_button) {
             Main.window.close();
         }
-        if (actionEvent.getSource()==sign_up_button) {
+        if (actionEvent.getSource() == sign_up_button ) {
             try {
                 Parent root2 = FXMLLoader.load(getClass().getResource("/sample/SignUpPage/SignUpPage.fxml"));
                 Main.setscene(root2);
@@ -70,16 +94,15 @@ public class StartPage_Controller {
                 e.printStackTrace();
             }
         }
-        if(actionEvent.getSource()==sign_in_button){
-            try {
-                Parent root1 = FXMLLoader.load(getClass().getResource("/sample/HomePage/homepage.fxml"));
-                Main.setscene(root1);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
     }
 
-    }
+
+
+
+
+
+
+
 }
+

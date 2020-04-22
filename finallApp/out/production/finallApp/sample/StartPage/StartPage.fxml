@@ -25,7 +25,7 @@
          <font>
             <Font size="20.0" />
          </font></PasswordField>
-      <Button fx:id="sign_in_button" layoutX="511.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #393939; -fx-background-radius: 30;" text="Sign in" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="sign_in_button" layoutX="511.0" layoutY="425.0" mnemonicParsing="false" onAction="#initialize" prefHeight="35.0" prefWidth="258.0" style="-fx-background-color: #393939; -fx-background-radius: 30;" text="Sign in" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Nirmala UI Bold" size="15.0" />
          </font>

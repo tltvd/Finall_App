@@ -41,9 +41,6 @@ public class Main extends Application {
         window.setResizable(false);
         window.show();
 
-
-
-
     }
 
     public static void setscene(Parent root){
