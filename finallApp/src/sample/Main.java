@@ -38,10 +38,8 @@ public class Main extends Application {
         window.setScene(new Scene(root, WIDTH, HEIGHT));
         window.initStyle(StageStyle.UNDECORATED);
         window.centerOnScreen();
+        window.setResizable(false);
         window.show();
-
-
-
 
     }
 

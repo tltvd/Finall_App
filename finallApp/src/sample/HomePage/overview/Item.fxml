@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="item_pnl" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePage.overview.item_controller">
+    <children>
+        <Label fx:id="brand" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" text="Mercedes" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin></Label>
+      <Label fx:id="model" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" text="ML63" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="year" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="155.0" text="2015" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="condition" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="155.0" text="Pre-owned" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="money" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" text="\$1600000" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI" size="20.0" />
+         </font>
+      </Label>
+        <Button fx:id="buy_button" mnemonicParsing="false" onAction="#handleClicks" prefHeight="27.0" prefWidth="83.0" style="-fx-border-color: a8eb12; -fx-border-radius: 20; -fx-background-color: transparent;" text="Buy" textFill="WHITE">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+         <font>
+            <Font name="Nirmala UI" size="15.0" />
+         </font>
+        </Button>
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</HBox>
